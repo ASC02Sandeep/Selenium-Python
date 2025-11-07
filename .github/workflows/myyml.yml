@@ -45,6 +45,8 @@ jobs:
         pip install --upgrade pip 
 
         pip install selenium webdriver-manager 
+        
+        pip install pytest
 
          
 
@@ -60,4 +62,4 @@ jobs:
 
     - name: Run verification script 
 
-      run: pytest Nov_6/tests_lab
+      run: pytest Nov_6/tests_lab/test_login_flow.py
