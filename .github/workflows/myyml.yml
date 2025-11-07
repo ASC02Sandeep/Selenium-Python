@@ -60,4 +60,4 @@ jobs:
 
     - name: Run verification script 
 
-      run: pytest PythonProgram/Nov_6/tests_lab
+      run: pytest Nov_6/tests_lab
