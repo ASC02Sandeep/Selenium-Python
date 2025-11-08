@@ -62,4 +62,4 @@ jobs:
 
     - name: Run verification script 
 
-      run: pytest Nov_6/tests_lab/test_login_flow.py
+      run: pytest Nov_6/tests_lab
