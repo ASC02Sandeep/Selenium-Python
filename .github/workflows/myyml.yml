@@ -19,7 +19,7 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install packages
+    - name: Install dependencies
       run: |
         pip install --upgrade pip
         pip install selenium webdriver-manager pytest
@@ -29,12 +29,10 @@ jobs:
         sudo apt update
         sudo apt install -y google-chrome-stable
 
-    # ✅ Force Chrome to run headless in CI (no code change needed)
-    - name: Run verification script in headless mode
-      env:
-        CHROME_HEADLESS: "true"
+    - name: Run Selenium test
       run: |
         python Capstone_Project/Selenium/Modular_Framework/modular_framework_demo.py
+
 
     # Optional: run your pytest suite too
     # - name: Run pytest
