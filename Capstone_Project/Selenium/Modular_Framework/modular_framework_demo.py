@@ -286,7 +286,7 @@ def validate_title_and_text(driver):
 # Main scenario
 # ----------------------------------------------------------------------
 def main():
-    driver = start_browser(headless=False)
+    driver = start_browser(headless=True)
     try:
         # 1) Login
         login(driver, "sandeep98@gmail.com", "sandeep123")
