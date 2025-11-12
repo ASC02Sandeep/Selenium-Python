@@ -28,7 +28,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # ----------------------------------------------------------------------
 # Common helpers
 # ----------------------------------------------------------------------
-def start_browser(headless=True):
+def start_browser(headless=False):
     """Start Chrome with optional headless; maximize for consistency."""
     chrome_options = Options()
     if headless:
