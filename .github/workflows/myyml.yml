@@ -22,18 +22,26 @@ jobs:
     - name: Install packages
       run: |
         pip install --upgrade pip
-        pip install selenium webdriver-manager
-        pip install pytest
+        pip install selenium webdriver-manager pytest
 
     - name: Install Chrome
       run: |
         sudo apt update
         sudo apt install -y google-chrome-stable
 
-    # ✅ Just added "--headless=new" so Chrome runs properly in GitHub
-    - name: Run verification script
+    # ✅ Force Chrome to run headless in CI (no code change needed)
+    - name: Run verification script in headless mode
+      env:
+        CHROME_HEADLESS: "true"
       run: |
-        python Capstone_Project/Selenium/Modular_Framework/modular_framework_demo.py --headless
+        python Capstone_Project/Selenium/Modular_Framework/modular_framework_demo.py
+
+    # Optional: run your pytest suite too
+    # - name: Run pytest
+    #   env:
+    #     CHROME_HEADLESS: "true"
+    #   run: pytest -v --disable-warnings
+
 
     # (optional) Run pytest as well
     # - name: Run pytest
