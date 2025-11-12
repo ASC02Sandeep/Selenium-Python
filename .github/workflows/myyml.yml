@@ -1,3 +1,5 @@
+# .github/workflows/verify-title.yml
+
 name: Simple Title Verification
 
 on:
@@ -17,44 +19,26 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install dependencies
+    - name: Install packages
       run: |
         pip install --upgrade pip
-        pip install selenium webdriver-manager pytest
+        pip install selenium webdriver-manager
+        pip install pytest
 
-    - name: Install Google Chrome
+    - name: Install Chrome
       run: |
         sudo apt update
         sudo apt install -y google-chrome-stable
 
-    - name: Run Modular Framework Test
-      env:
-        DISPLAY: :99
+    # ✅ Just added "--headless=new" so Chrome runs properly in GitHub
+    - name: Run verification script
       run: |
-        python - <<'EOF'
-        from Capstone_Project.Selenium.Modular_Framework.modular_framework_demo import start_browser, main
+        python Capstone_Project/Selenium/Modular_Framework/modular_framework_demo.py --headless
 
-        # ✅ Start Chrome in headless mode for GitHub Actions
-        import sys
-        def patched_browser():
-            from selenium import webdriver
-            from selenium.webdriver.chrome.options import Options
-            chrome_options = Options()
-            chrome_options.add_argument("--headless=new")
-            chrome_options.add_argument("--no-sandbox")
-            chrome_options.add_argument("--disable-dev-shm-usage")
-            chrome_options.add_argument("--disable-gpu")
-            chrome_options.add_argument("--window-size=1920,1080")
-            driver = webdriver.Chrome(options=chrome_options)
-            driver.maximize_window()
-            return driver
+    # (optional) Run pytest as well
+    # - name: Run pytest
+    #   run: pytest -v
 
-        # Patch your function before calling main()
-        import Capstone_Project.Selenium.Modular_Framework.modular_framework_demo as demo
-        demo.start_browser = patched_browser
-
-        demo.main()
-        EOF
 
 
 ## .github/workflows/verify-title.yml
