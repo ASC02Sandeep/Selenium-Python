@@ -9,12 +9,13 @@ appium_server_url = "http://localhost:4723"
 options = UiAutomator2Options()
 options.platform_name = "Android"
 options.platform_version = "13"  # Android 13 from your target=android-36
-options.device_name = "Medium_Phone_API_36.1"  # From your AvdId
+options.device_name = "Pixel_9_Pro"  # From your AvdId
 options.automation_name = "UiAutomator2"
 options.udid = "emulator-5554"  # Use actual device ID from 'adb devices'
+options.ignore_hidden_api_policy_error = True
 
 # Emulator-specific properties from your configuration
-options.avd = "Medium_Phone_API_36.1"  # AVD name
+options.avd = "Pixel_9_Pro"  # AVD name
 options.avd_launch_timeout = 120000  # 2 minutes for emulator launch
 options.avd_ready_timeout = 120000
 
