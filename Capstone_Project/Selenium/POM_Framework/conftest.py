@@ -13,7 +13,7 @@ BASE_URL = "https://demowebshop.tricentis.com/"
 def pytest_addoption(parser):
     # --browser: chrome or edge | --headless: true/false
     parser.addoption("--browser", action="store", default="chrome")
-    parser.addoption("--headless", action="store", default="false")
+    parser.addoption("--headless", action="store", default="true")
 
 @pytest.fixture(scope="session")
 def config(request):
