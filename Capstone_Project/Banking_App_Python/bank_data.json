@@ -4,7 +4,14 @@
             "id": "5ef4d0b0",
             "owner": "sandeep kumar",
             "balance": 4000.0,
-            "created_at": "2025-11-08 11:46:23",
+            "created_at": "2025-11-17 14:11:54",
+            "type": "SavingsAccount"
+        },
+        "2163033e": {
+            "id": "2163033e",
+            "owner": "uday",
+            "balance": 3000.0,
+            "created_at": "2025-11-17 14:12:25",
             "type": "SavingsAccount"
         }
     },
@@ -48,6 +55,14 @@
             "amount": 2000.0,
             "description": "From 5ef4d0b0",
             "timestamp": "2025-11-08 11:47:46"
+        },
+        {
+            "id": "72001637",
+            "account_id": "2163033e",
+            "type": "CREATE",
+            "amount": 3000.0,
+            "description": "New savings account created",
+            "timestamp": "2025-11-17 14:12:25"
         }
     ]
 }

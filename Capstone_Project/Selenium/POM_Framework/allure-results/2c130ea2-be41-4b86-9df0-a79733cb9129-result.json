@@ -1,0 +1,9 @@
+{"name": "test_login_invalid",
+  "status": "passed",
+  "description": "Invalid login shows validation summary (explicit wait).",
+  "start": 1763357719222, "stop": 1763357725802,
+  "uuid": "1573d970-0212-4756-990a-402aeb0f5f1a",
+  "historyId": "63304e9dbfed29e2f531c396bf60dc0b",
+  "testCaseId": "63304e9dbfed29e2f531c396bf60dc0b",
+  "fullName": "tests.test_login#test_login_invalid",
+  "labels": [{"name": "tag", "value": "login"}, {"name": "tag", "value": "smoke"}, {"name": "parentSuite", "value": "tests"}, {"name": "suite", "value": "test_login"}, {"name": "host", "value": "ASCINLAP61628"}, {"name": "thread", "value": "36380-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "tests.test_login"}], "titlePath": ["tests", "test_login.py"]}

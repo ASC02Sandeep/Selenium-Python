@@ -19,13 +19,6 @@ class RegisterPage:
     PASSWORD = (By.ID, "Password")
     CONFIRM = (By.ID, "ConfirmPassword")
 
-    # --- Newsletter checkbox on register form ---
-    # NEWSLETTER_CHECK = (By.ID, "Newsletter")
-
-    # --- Dropdowns (DOB) ---
-    # DOB_DAY = (By.NAME, "DateOfBirthDay")
-    # DOB_MONTH = (By.NAME, "DateOfBirthMonth")
-    # DOB_YEAR = (By.NAME, "DateOfBirthYear")
 
     # --- Submit ---
     REGISTER_BTN = (By.ID, "register-button")
@@ -56,21 +49,7 @@ class RegisterPage:
         self.driver.find_element(*self.PASSWORD).send_keys(pwd)
         self.driver.find_element(*self.CONFIRM).send_keys(pwd)
 
-    # def toggle_newsletter(self, enable=True):
-    #     """Newsletter checkbox does NOT exist on Demo Web Shop Registration.
-    #        We gracefully skip the action to avoid test failure."""
-    #     try:
-    #         box = self.driver.find_element(*self.NEWSLETTER_CHECK)
-    #         if box.is_selected() != enable:
-    #             box.click()
-    #     except:
-    #         print(" Newsletter checkbox not present on registration form — skipping.")
-    #
-    # def set_dob(self, day="10", month="May", year="1995"):
-    #     """Use Select for dropdowns (classic)."""
-    #     Select(self.driver.find_element(*self.DOB_DAY)).select_by_visible_text(day)
-    #     Select(self.driver.find_element(*self.DOB_MONTH)).select_by_visible_text(month)
-    #     Select(self.driver.find_element(*self.DOB_YEAR)).select_by_visible_text(year)
+
 
     def submit(self):
         """Click Register."""

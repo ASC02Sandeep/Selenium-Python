@@ -62,6 +62,6 @@ def test_search_and_add_first_item_to_cart(driver, base_url):
         EC.presence_of_element_located((By.CSS_SELECTOR, "span.cart-qty"))
     )
     qty = qty_elem.text.strip("()")
-    assert qty in ("0", ""), f"❌ Cart not empty after removal. Found qty={qty}"
+    assert qty in ("0", ""), f" Cart not empty after removal. Found qty={qty}"
 
-    print("✅ [PASSED] Cart successfully emptied after adding and removing an item.")
+    print(" [PASSED] Cart successfully emptied after adding and removing an item.")

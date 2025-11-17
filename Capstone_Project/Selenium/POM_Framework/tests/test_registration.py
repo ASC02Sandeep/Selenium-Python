@@ -18,11 +18,6 @@ def test_user_registration_flow(driver):
     unique_email = f"nitin_{driver.session_id[:5]}@example.com"
     page.set_name_email("nitin", "Kumar", unique_email)
 
-    # DROPDOWNS
-    # page.set_dob(day="10", month="May", year="1995")
-
-    # CHECKBOX (newsletter on registration form)
-    # page.toggle_newsletter(True)
 
     # PASSWORDS
     page.set_passwords("nitin@123")
